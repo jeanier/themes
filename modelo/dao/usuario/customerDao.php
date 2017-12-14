@@ -23,9 +23,11 @@ class customerDao {
 
       if($query->num_rows==0)
       {
-        $st = "CALL insertarCustomers ('$pagoid','$customerid', '$userid','$companyid','$email','$date', '$monto', '$key', '$status')";
-        $query = $this->con->query($st); 
+        $rt = "CALL insertarCustomers ('$pagoid','$customerid','$userid','$companyid', '$email', '$date', '$monto', '$key','$status')";
+
+        $query = $this->con->query($rt); 
         $result = Notification::registeredRecord($query);
+
       } 
       else
       {

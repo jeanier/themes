@@ -9,7 +9,7 @@ class usuariosSql
 
     public static function  registrarUsuario()
     {
-        $query="INSERT INTO doo_admin(username,password)VALUES(?,?)";
+        $query="CALL insertarCustomers (?,?)";
         return $query;
     }
 

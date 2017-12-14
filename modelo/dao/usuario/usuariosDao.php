@@ -96,7 +96,6 @@ class usuarioDao {
         $rt = "CALL insertarUA ('$apaterno', '$amaterno', '$nombre', '$usuario', '$email', '$password', '$tipo', '$status', NOW())";
         $query = $this->con->query($rt); 
         $result = Notification::registeredRecord($query);
-
       } 
       else
       {

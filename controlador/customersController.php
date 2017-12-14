@@ -41,7 +41,7 @@ switch ($_POST['action']) {
         $status     = $_POST['j'];
 
         $bo = new customerBo();
-        $r = $bo->saveDataCustomerBo($id,$pagoid,$customerid, $userid,$companyid,$email,$date, $monto, $key, $status);
+        $r = $bo->saveDataCustomerBo($id, $pagoid, $customerid, $userid, $companyid, $email, $date, $monto, $key, $status);
         print $r;
         break;
 
@@ -52,6 +52,7 @@ switch ($_POST['action']) {
         $r = $bo->eliminarCustomerBo($customerid);
         print $r;
         break;
+        
     case 'select':
         $bo = new customerBo();
         $r = $bo->traeCustomerBo();

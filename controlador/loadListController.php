@@ -10,15 +10,13 @@ switch ($_GET['action']) {
 		$r = $bo->traeUsuariosBo();
 		print $r;
 		break;
-}
 
-switch ($_GET['action']) {
 	case "customers":  
 		$bo = new customerBo();
 		$r = $bo->traeCustomerBo();
 		print $r;
 		break;
 }
-          
+
 
   
